@@ -1,0 +1,95 @@
+.popup-container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    gap: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Segoe UI';
+    z-index: 1; 
+    position: absolute;
+}
+
+.popup-section-1 {
+    padding: 10px;
+    background-color: #F1F1F1;
+}
+
+.popup-section-1 h4{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h4 span{
+    font-weight: 500;
+}
+
+.popup-section-1 div{
+   font-size: 16px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.popup-container .popup-section-1 .cards {
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.orange{
+    color: #E87722;
+    border-bottom: 3px solid #E87722;     
+}
+
+.div2{
+     color: #E10600;
+    border-bottom: 3px solid #E10600;   
+}
+
+.div3{
+    color: #CE0F69;
+    border-bottom: 3px solid #CE0F69;
+}
+
+.div4{
+    color: #830065;
+    border-bottom: 3px solid #830065;
+}
+
+.div5{
+    color:#0085CA;
+    border-bottom:  3px solid #0085CA;
+}
+
+.div6{
+    color:#3BAD4E;
+    border-bottom: 3px solid #3BAD4E;
+}
+
+.div7{
+    color: #203E96;
+    border-bottom: 3px solid #203E96;
+}
+
+.popup-section-1 p{
+    font-size: 11px !important;
+    font-weight: 400;
+    margin-top: 10px !important;
+    font-family: 'Inter';
+    color: #313131BF;
+}
+
+.popup-container .close-btn{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    text-transform: capitalize;
+    padding-top: 10px;
+    cursor: pointer;
+}

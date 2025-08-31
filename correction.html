@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nested Checkbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .category {
+      margin-top: 10px;
+    }
+    .items {
+      margin-left: 20px;
+    }
+    label {
+      display: block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Nested Checkbox</h2>
+  <label>
+    <input type="checkbox" id="selectAll"> Select All
+  </label>
+
+  <div class="category">
+    <label>
+      <input type="checkbox" class="category-checkbox" data-category="fruits"> Fruits
+    </label>
+    <div class="items">
+      <label><input type="checkbox" class="fruit"> Apple</label>
+      <label><input type="checkbox" class="fruit"> Banana</label>
+      <label><input type="checkbox" class="fruit"> Orange</label>
+    </div>
+  </div>
+  <div class="category">
+    <label>
+      <input type="checkbox" class="category-checkbox" data-category="vegetables"> Vegetables
+    </label>
+    <div class="items">
+      <label><input type="checkbox" class="vegetable"> Carrot</label>
+      <label><input type="checkbox" class="vegetable"> Broccoli</label>
+      <label><input type="checkbox" class="vegetable"> Potato</label>
+    </div>
+  </div>
+
+<script>
+const selectAll = document.getElementById('selectAll');
+const categoryCheckboxes = document.querySelectorAll('.category-checkbox');
+const fruits = document.querySelectorAll('.fruit');
+const vegetables = document.querySelectorAll('.vegetable');
+
+// Helper to check/uncheck all elements in a NodeList and remove indeterminate state
+function setCheckboxes(checkboxes, checked) {
+    checkboxes.forEach(cb => {
+        cb.checked = checked;
+        cb.indeterminate = false;
+    });
+}
+
+// Update parent category checkbox (checked, unchecked, indeterminate based on children)
+function updateParentCheckbox(parent, childCheckboxes) {
+    const total = childCheckboxes.length;
+    const checked = [...childCheckboxes].filter(cb => cb.checked).length;
+    parent.checked = checked === total;
+    parent.indeterminate = checked > 0 && checked < total;
+}
+
+// Update selectAll checkbox (checked, unchecked, indeterminate based on all leaf checkboxes)
+function updateSelectAll() {
+    const allItems = [...fruits, ...vegetables];
+    const total = allItems.length;
+    const checked = allItems.filter(cb => cb.checked).length;
+    selectAll.checked = checked === total;
+    selectAll.indeterminate = checked > 0 && checked < total;
+}
+
+// On 'Select All' change, propagate to all category and leaf checkboxes
+selectAll.addEventListener('change', (e) => {
+    setCheckboxes(categoryCheckboxes, e.target.checked);
+    setCheckboxes(fruits, e.target.checked);
+    setCheckboxes(vegetables, e.target.checked);
+});
+
+// On parent category checkbox change, propagate to all children of that category
+categoryCheckboxes.forEach(cb => {
+    cb.addEventListener('change', e => {
+        const cat = cb.dataset.category;
+        if (cat === 'fruits') {
+            setCheckboxes(fruits, cb.checked);
+        } else if (cat === 'vegetables') {
+            setCheckboxes(vegetables, cb.checked);
+        }
+        cb.indeterminate = false;
+        updateSelectAll();
+    });
+});
+
+// On individual child checkbox change, update parent and selectAll states
+function handleChildChange(category, children, parent) {
+    children.forEach(child => {
+        child.addEventListener('change', () => {
+            updateParentCheckbox(parent, children);
+            updateSelectAll();
+        });
+    });
+}
+
+handleChildChange('fruits', fruits, document.querySelector('.category-checkbox[data-category="fruits"]'));
+handleChildChange('vegetables', vegetables, document.querySelector('.category-checkbox[data-category="vegetables"]'));
+
+</script>
+</body>
+</html>

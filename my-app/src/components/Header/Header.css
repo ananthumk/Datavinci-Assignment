@@ -1,0 +1,32 @@
+.section-header{
+    width: 100%;
+    background-color: #FBF9F6;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.menu-icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.logo-icon{
+    width: 100px;
+    height: 40px;
+}
+
+.sidebar-container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}

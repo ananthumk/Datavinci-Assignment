@@ -1,0 +1,411 @@
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #FBF9F6;
+}
+
+@media (min-width: 726px){
+    .banner-container{
+        flex-direction: row;
+        padding: 20px 100px;
+        gap: 40px;
+    }
+    .product-container{
+        align-self: flex-start;
+        width: 50%;
+    }
+    .bg-image{
+        width: 600px;
+        height: 500px;
+    }
+    .banner-details-container h1{
+        width: 100% !important;
+    }
+}
+
+.product-container {
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    width: 20px;
+    height: 40px;
+}
+
+.bg-image {
+    position: relative;
+    width: 400px;
+    height: 350px;
+
+}
+
+.product-img {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+}
+
+.banner-details-container {
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.banner-details-container h1 {
+
+    font-size: 35px;
+    font-weight: 400;
+    width: 200px;
+    padding: 0px;
+    line-height: normal;
+    color: #313131;
+    margin: 0;
+}
+
+.banner-details-container p {
+    padding: 0px;
+    margin: 0;
+    color: #313131;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+p span {
+    font-size: 37px;
+    font-weight: 400;
+}
+
+.details-section {
+    padding-bottom: 10px;
+}
+
+.section2 {
+    padding: 4px 8px;
+    border-radius: 80px;
+    background-color: #66666626;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    position: relative;
+}
+
+.section2 img {
+    width: 15px;
+    height: 15px;
+}
+
+.section2 p {
+    font-size: 12px;
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.description-container {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.rating-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI';
+}
+
+.rating-card p {
+    font-size: 16px;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-icon {
+    width: 80px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.description-container .description-section{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.certificate-container, .bottles-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:20px;
+}
+
+.bottles-section{
+    justify-content: center;
+}
+
+.certificate-image{
+    width: 60px;
+    height: 60px;
+}
+
+.bottle-container{
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bottle-container .select-paragraph, .payment-container .payment-paragraph{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.bottle-container .variant-paragraph{
+    font-size: 17px;
+    font-family: 500;
+}
+
+
+@media screen and (min-width: 726px) {
+      
+}
+
+.payment-section{
+    padding-top: 20px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.payment-section .section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section1 .left-card, .right-card{
+    padding: 10px; 
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-card{
+    background-color: #F1B434;
+}
+
+.right-card{
+    background-color: #FFFFFF;
+    border: 1px solid #F1B434;
+}
+
+.left-card p , .right-card p{
+    font-size: 15px;
+}
+
+.what-subscription-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.reload-icon{
+    width: 12px;
+    height: 12px;
+}
+
+.what-subscription-section p{
+    font-size: 12px;
+}
+
+.quantity-container .sub-paragraph{
+   font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.quantity-container .button-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity-counter-container, .add-to-cart{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.quantity-counter-container{
+     background-color: #F1B434;
+}
+
+.quantity-counter-container p, .add-to-cart p{
+    font-size: 16px;
+    font-weight: 400;
+    color:#FFF;
+}
+
+.quantity-counter-container p{
+    cursor: pointer;
+}
+
+.add-to-cart{
+    background-color: #313131;
+    
+}
+
+.beauty-bundle-container{
+    background-color: #F2F2F2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; 
+    border-radius: 20px;
+}
+
+.beauty-bundle-container .section1{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    gap: 20px;
+}
+
+.section1 img{
+    width: 10px;
+    height: 25px;
+}
+
+.section1 h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+}
+
+
+.sectionb2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+.sectionb2 .part1{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.sectionb2 .part1 h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sectionb2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.image-container{
+    /* width: 60px;
+    height: 60px; */
+    padding: 1px;
+    background-color: #FFF;
+    border-radius: 10px;
+    
+}
+.image-container img{
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.sectionb2 div h3{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Segoe UI;
+    padding: 0;
+    margin: 2px;
+    text-align: center;
+}
+
+.sectionb2 div select{
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+    padding: 0;
+    margin: 2px;
+}
+
+.part2 div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI';
+    gap: 30px;
+}
+
+.part2 .underline-paragraph{
+    font-size: 12px;
+}
+
+.part2 .bold-paragraph{
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.part2 .save{
+    font-size: 15px;
+    font-weight: 500;
+    color: green;
+}
+
+.part2 button{
+    background-color: #313131;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 100% !important;
+    padding: 5px;
+    margin-top: 8px;
+}
