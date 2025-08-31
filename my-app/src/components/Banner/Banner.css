@@ -19,10 +19,18 @@
     .banner-details-container{
         width: 60%;
     }
-    .bg-image{
-        width: 600px;
-        height: 500px;
+    .p-container .bg-image{
+       position: absolute;
+    width: 500px;
+    height: 350px;
     }
+    .p-container .product-img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}{
+
+}
     .banner-details-container h1{
         width: 100% !important;
     }
@@ -41,14 +49,14 @@
 }
 
 .bg-image {
-    position: absolute;
-    width: 500px;
+    position: relative;
+    width: 400px;
     height: 350px;
 
 }
 
 .product-img {
-    position: relative;
+    position: absolute;
     width: 350px;
     height: 350px;
 }
