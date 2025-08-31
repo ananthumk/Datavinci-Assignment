@@ -22,7 +22,11 @@ import bbBottle1 from '../../assests/bbBottle1.png'
 import bbBottle2 from '../../assests/bbBottle2.png'
 import spoon from '../../assests/woodenSpoon.png'
 import rotate from '../../assests/rotate.png'
+import List from '../../assests/List.png'
+
 import PopUp from '../PopUp/PopUp'
+
+
 import './Banner.css'
 
 
@@ -33,11 +37,13 @@ const Banner = () => {
     }
     return (
         <div className='banner-container'>
-            <div className='product-container'>
+            <div className='p-container'>
+                <div className='product-container'>
                 <img src={leftArrow} alt='left-arrow' className='arrow' />
                 <img src={bgImg} alt='bg-image' className='bg-image' />
                 <img src={productImg} alt='product' className='product-img' />
-                <img src={rightArrow} alt='right-arrow' className='arrow' />
+                <img src={rightArrow} alt='right-arrow' className='arrow' /></div>
+                <img src={List} alt='' className='list-image' />
             </div>
             <div className='banner-details-container'>
                 <div className='details-section'>
